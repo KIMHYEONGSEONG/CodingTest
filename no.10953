@@ -1,0 +1,33 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args){
+
+		Scanner scan = new Scanner(System.in);
+		ArrayList<Integer> arr = new ArrayList<>();
+		
+		int T = scan.nextInt();
+		
+		scan.nextLine();
+		for(int i = 1; i <= T; i++) {
+			String a = scan.nextLine();
+
+			int b = Character.getNumericValue(a.charAt(0));
+			int c = Character.getNumericValue(a.charAt(2));
+			
+			int res = b + c;
+			
+			arr.add(res);
+		}
+		
+		for(int j = 0; j < arr.size(); j++) {
+			System.out.println(arr.get(j));
+		}
+		
+		scan.close();
+	}
+}
