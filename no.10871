@@ -1,0 +1,34 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		ArrayList<Integer> arr = new ArrayList<>();
+		ArrayList<Integer> arr2 = new ArrayList<>();
+		
+		int N = scan.nextInt();
+		int X = scan.nextInt();
+		
+		for (int i = 0; i < N; i++) {
+			int a = scan.nextInt();
+			arr.add(a);
+		}
+		
+		for (int j = 0; j < N; j++) {
+			if (arr.get(j) < X)	 {
+				arr2.add(arr.get(j));
+			}
+		}
+		
+		for (int k = 0; k < arr2.size(); k++) { //ArrayList는 length()가 없음. size()를 활용
+			System.out.print(arr2.get(k) + " ");
+		}
+	
+		
+	}
+}
