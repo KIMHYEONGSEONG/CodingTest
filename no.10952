@@ -1,0 +1,23 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		
+		while(scan.hasNext()) { // 입력값이 있다면 계속 입력 가능
+			int A = scan.nextInt();
+			int B = scan.nextInt();
+			
+			int res = A + B;
+			if(res != 0) {
+				System.out.println(res);	
+			} else {
+				break;
+			}
+		}
+	}
+}
