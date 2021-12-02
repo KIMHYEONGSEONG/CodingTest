@@ -1,0 +1,26 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		
+		int A = scan.nextInt();
+		int B = scan.nextInt();
+		
+		String str = Integer.toString(B);
+		
+		for(int i = 2; i >= 0; i--) {
+			int temp = Character.getNumericValue(str.charAt(i));
+			// Character 클래스의 getNumericValue(유니코드 문자를 정수로 리턴) 매서드 활용
+			System.out.println(A * temp);
+		}
+		
+		System.out.println(A * B);
+
+		scan.close();
+	}
+}
